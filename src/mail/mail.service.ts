@@ -1,6 +1,7 @@
 import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { IReview } from 'src/review/review.types';
 
 @Injectable()
 export class MailService {
@@ -9,18 +10,17 @@ export class MailService {
     private readonly configService: ConfigService,
   ) {}
 
-  public async sendRevocationConfirmation(): Promise<void> {
+  public async sendRevocationConfirmation(review: IReview): Promise<void> {
     return await this.mailerService.sendMail({
       from: this.configService.get('MAIL_FROM'),
-      to: this.configService.get('MAIL_TO'),
+      to: this.configService.get('MAIL_FROM'),
       subject: 'Welcome! Confirm Revocation',
       template: './revocation-confirmation',
       context: {
-        url: 'confirmUrl',
-        revocation:
-          'Лорем іпсум долор сіт амет, консектетур адіпісцінг еліт. Нуллам ін щам вітає юсто тінцідунт аліквам.',
-        revocationOwner: 'Hlib',
-        rating: 5,
+        url: 'http://localhost:3000/review',
+        revocation: review.revocation,
+        revocationOwner: review.owner,
+        rating: review.revocation,
       },
     });
   }

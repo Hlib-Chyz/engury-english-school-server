@@ -13,7 +13,7 @@ export class ReviewController {
   }
 
   @Post()
-  public add(@Request() { review }: { review: IReview }): Promise<Review> {
-    return this.reviewService.create(review);
+  public add(@Request() { body }: { body: IReview }): Promise<Review> {
+    return this.reviewService.create(body);
   }
 }
