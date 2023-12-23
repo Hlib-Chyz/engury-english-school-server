@@ -20,7 +20,7 @@ export class MailService {
         url: 'http://localhost:3000/review',
         revocation: review.revocation,
         revocationOwner: review.owner,
-        rating: review.revocation,
+        rating: review.rating,
       },
     });
   }

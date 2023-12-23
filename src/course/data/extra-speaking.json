@@ -1,0 +1,71 @@
+{
+  "courseSections": [
+    { "name": "Grammar", "subSections": ["1", "2", "3"], "isExpanded": false },
+    { "name": "Speaking", "subSections": ["1", "2", "3"], "isExpanded": false },
+    { "name": "Reading", "subSections": ["1", "2", "3"], "isExpanded": false }
+  ],
+  "roadByCourse": [
+    "At the end of the course, you will be able to write and debug tests with a full and in-depth understanding of what you are doing and how things are working 1.",
+    "At the end of the course, you will be able to write and debug tests with a full and in-depth understanding of what you are doing and how things are working 2.",
+    "At the end of the course, you will be able to write and debug tests with a full and in-depth understanding of what you are doing and how things are working 3."
+  ],
+  "forWhomIsThisCourse": [
+    {
+      "smile": "bg-yellow-500",
+      "text": "You have some Angular experience but are looking for a 'deep dive' into the topic and you want to figure out how everything works under the hood.",
+      "bgColor": "bg-blue-100"
+    },
+    {
+      "smile": "bg-green-500",
+      "text": "Your Angular application consists of a lot of forms, custom controls, and validation rules",
+      "bgColor": "bg-blue-300"
+    },
+    {
+      "smile": "bg-red-500",
+      "text": "You want to learn how to create custom form controls because you are tired of hacking the Angular Material components and trying to adjust them to the 'creative' whims of your UI Designers & Managers",
+      "bgColor": "bg-blue-100"
+    }
+  ],
+  "questionsYouMightHave": [
+    {
+      "title": "At the end of the course 1",
+      "text": "You have some Angular experience but are looking for a 'deep dive' into the topic and you want to figure out how everything works under the hood.",
+      "showText": false
+    },
+    {
+      "title": "At the end of the course 2",
+      "text": "You have some Angular experience but are looking for a 'deep dive' into the topic and you want to figure out how everything works under the hood.",
+      "showText": false
+    },
+    {
+      "title": "At the end of the course 3",
+      "text": "You have some Angular experience but are looking for a 'deep dive' into the topic and you want to figure out how everything works under the hood.",
+      "showText": false
+    },
+    {
+      "title": "At the end of the course 4",
+      "text": "You have some Angular experience but are looking for a 'deep dive' into the topic and you want to figure out how everything works under the hood.",
+      "showText": false
+    }
+  ],
+  "pricingOptions": [
+    { "price": "60", "name": "Regular price" },
+    { "price": "100", "name": "Basic" },
+    { "price": "60", "name": "Advanced" }
+  ],
+  "moreAboutPriceOptions": [
+    {
+      "text": "This option gives you lifetime access to all video lectures for the course including also all updates",
+      "name": "Regular price"
+    },
+    {
+      "text": "You get everything from the 1st option and additionally 1 Mock Interview + Detailed Feedback. It is the best way to find out your level and expose knowledge gaps before the real Angular interview!",
+      "name": "Basic",
+      "top": true
+    },
+    {
+      "text": "If you are looking for the best and personalized experience - this option is for you! It includes everything from the previous 2 options and additionally 5 hours of personalized training & mentoring sessions. Warning! It may drastically increase your chances of getting a job offer",
+      "name": "Advanced"
+    }
+  ]
+}
