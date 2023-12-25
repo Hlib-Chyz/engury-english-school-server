@@ -10,7 +10,6 @@ export class CourseController {
   public getOne(
     @Request() { body }: { body: { courseName: CourseNames } },
   ): ICourseInfo {
-    console.log(body.courseName);
     return this.courseService.getCourse(body.courseName);
   }
 }
