@@ -1,13 +1,16 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Request } from '@nestjs/common';
 import { CourseService } from 'src/course/course.service';
-import { ICourseInfo } from 'src/course/course.types';
+import { CourseNames, ICourseInfo } from 'src/course/course.types';
 
 @Controller('course')
 export class CourseController {
   public constructor(private readonly courseService: CourseService) {}
 
   @Get()
-  public getOne(): ICourseInfo {
-    return this.courseService.getCourse('native-speackirizm');
+  public getOne(
+    @Request() { body }: { body: { courseName: CourseNames } },
+  ): ICourseInfo {
+    console.log(body.courseName);
+    return this.courseService.getCourse(body.courseName);
   }
 }

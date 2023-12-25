@@ -25,3 +25,9 @@ export interface ICourseInfo {
     top?: boolean;
   }[];
 }
+
+export type CourseNames =
+  | 'native-speackirizm'
+  | 'extra-grammar'
+  | 'extra-speaking'
+  | 'lessons-with-zlata';
