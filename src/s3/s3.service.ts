@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as AWS from 'aws-sdk';
-import { ICourseInfo } from 'src/course/course.types';
+import { ICourseInfo } from 'src/courses/courses.types';
 import { config } from 'dotenv';
 
 config();
@@ -15,12 +15,17 @@ const s3 = new AWS.S3();
 
 @Injectable()
 export class S3Service {
-  public async getJsonFromS3(fileName: string): Promise<ICourseInfo> {
+  public async getCourseInfo(id: string): Promise<ICourseInfo> {
+    const courses = await this.getCourses();
+    return courses.find((course) => course.id === id);
+  }
+
+  public async getCourses(): Promise<ICourseInfo[]> {
     const params = {
-      Bucket: process.env.AWS_BUCKET_NAME, // Bucket Name
-      Key: `${fileName}.json`,
+      Bucket: process.env.AWS_BUCKET_NAME,
+      Key: 'courses.json',
     };
     const response = await s3.getObject(params).promise();
-    return JSON.parse(response.Body.toString());
+    return await JSON.parse(response.Body.toString());
   }
 }

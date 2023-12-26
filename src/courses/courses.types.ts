@@ -1,4 +1,8 @@
 export interface ICourseInfo {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
   courseSections: {
     name: string;
     subSections: string[];
@@ -25,9 +29,3 @@ export interface ICourseInfo {
     top?: boolean;
   }[];
 }
-
-export type CourseNames =
-  | 'native-speackirizm'
-  | 'extra-grammar'
-  | 'extra-speaking'
-  | 'lessons-with-zlata';
