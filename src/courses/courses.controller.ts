@@ -1,4 +1,4 @@
-import { Controller, Get, Request } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { CoursesService } from 'src/courses/courses.service';
 import { ICourseInfo } from 'src/courses/courses.types';
 
@@ -6,10 +6,8 @@ import { ICourseInfo } from 'src/courses/courses.types';
 export class CoursesController {
   public constructor(private readonly courseService: CoursesService) {}
 
-  @Get()
-  public getOne(
-    @Request() { body: id }: { body: string },
-  ): Promise<ICourseInfo> {
+  @Get(':id')
+  public getOne(@Param('id') id: string): Promise<ICourseInfo> {
     return this.courseService.getOne(id);
   }
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import * as AWS from 'aws-sdk';
-import { ICourseInfo } from 'src/courses/courses.types';
 import { config } from 'dotenv';
+import { ICourseInfo } from 'src/courses/courses.types';
 
 config();
 
