@@ -18,4 +18,8 @@ export class ReviewService {
   public async findAll(): Promise<Review[]> {
     return await this.reviewModel.find().exec();
   }
+
+  public async findByCourseId(courseId: string): Promise<Review[]> {
+    return await this.reviewModel.find({ courseId: { $eq: courseId } }).exec();
+  }
 }

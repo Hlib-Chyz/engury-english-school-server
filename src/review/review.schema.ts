@@ -11,6 +11,8 @@ export class Review {
   revocation: string;
   @Prop({ required: true })
   rating: number;
+  @Prop({ required: true })
+  courseId: string;
 }
 
 export const ReviewSchema = SchemaFactory.createForClass(Review);

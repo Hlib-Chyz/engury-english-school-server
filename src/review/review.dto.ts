@@ -8,4 +8,6 @@ export class CreateReviewDto {
   revocation: string;
   @IsNotEmpty({ message: 'Rating should not be empty' })
   rating: number;
+  @IsNotEmpty({ message: 'Course id should not be empty' })
+  courseId: string;
 }

@@ -17,10 +17,11 @@ export class MailService {
       subject: 'Welcome! Confirm Revocation',
       template: './revocation-confirmation',
       context: {
-        url: 'http://localhost:3000/review',
+        url: 'http://localhost:3001/review',
         revocation: review.revocation,
         revocationOwner: review.owner,
         rating: review.rating,
+        courseId: review.courseId,
       },
     });
   }

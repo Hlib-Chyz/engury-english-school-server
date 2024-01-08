@@ -3,4 +3,5 @@ export interface IReview {
   owner: string;
   revocation: string;
   rating: number;
+  courseId: string;
 }
