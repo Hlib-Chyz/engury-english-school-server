@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CoursesModule } from 'src/courses/courses.module';
 import { ReviewModule } from 'src/review/review.module';
+import { TutorialModule } from 'src/tutorials/tutorials.module';
 import { MailModule } from './mail/mail.module';
 
 @Module({
@@ -10,6 +11,7 @@ import { MailModule } from './mail/mail.module';
     MailModule,
     ReviewModule,
     CoursesModule,
+    TutorialModule,
     MongooseModule.forRootAsync({
       useFactory: async (config: ConfigService) => ({
         uri: config.get('MONGO_URI'),
