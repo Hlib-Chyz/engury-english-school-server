@@ -1,5 +1,5 @@
 import { Controller, Post, Request } from '@nestjs/common';
-import { MailService } from './mail.service';
+import { MailService } from 'src/mail/mail.service';
 import { IReview } from 'src/review/review.types';
 
 @Controller('mail')

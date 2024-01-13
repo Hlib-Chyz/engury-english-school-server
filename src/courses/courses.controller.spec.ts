@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CoursesController } from './courses.controller';
-import { CoursesService } from './courses.service';
+import { CoursesController } from 'src/courses/courses.controller';
+import { CoursesService } from 'src/courses/courses.service';
 import { ICourseInfo } from 'src/courses/courses.types';
 
-jest.mock('./courses.service');
+jest.mock('src/courses/courses.service');
 
 describe('CoursesController', () => {
   let controller: CoursesController;
