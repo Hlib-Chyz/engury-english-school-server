@@ -7,7 +7,7 @@ import { CreateReviewDto } from 'src/review/review.dto';
 @Injectable()
 export class ReviewService {
   public constructor(
-    @InjectModel(Review.name) private reviewModel: Model<Review>,
+    @InjectModel(Review.name) private readonly reviewModel: Model<Review>,
   ) {}
 
   public async create(createReviewDto: CreateReviewDto): Promise<Review> {

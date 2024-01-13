@@ -6,13 +6,13 @@ export type ReviewDocument = HydratedDocument<Review>;
 @Schema()
 export class Review {
   @Prop({ required: true })
-  owner: string;
+  public owner: string;
   @Prop({ required: true })
-  revocation: string;
+  public revocation: string;
   @Prop({ required: true })
-  rating: number;
+  public rating: number;
   @Prop({ required: true })
-  courseId: string;
+  public courseId: string;
 }
 
 export const ReviewSchema = SchemaFactory.createForClass(Review);
