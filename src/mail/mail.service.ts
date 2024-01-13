@@ -12,8 +12,8 @@ export class MailService {
 
   public async sendRevocationConfirmation(review: IReview): Promise<void> {
     return await this.mailerService.sendMail({
-      from: this.configService.get('MAIL_FROM'),
-      to: this.configService.get('MAIL_FROM'),
+      from: await this.configService.get<string>('MAIL_FROM'),
+      to: await this.configService.get<string>('MAIL_FROM'),
       subject: 'Welcome! Confirm Revocation',
       template: './revocation-confirmation',
       context: {
