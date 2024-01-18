@@ -50,6 +50,7 @@
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "aws-sdk-mock": "^5.8.0",
     "commitlint": "^18.4.4",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^9.0.0",
